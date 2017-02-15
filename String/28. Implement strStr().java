@@ -26,6 +26,7 @@ public class Solution {
 
 public class Solution {
     public int strStr(String haystack, String needle) {
+        /* it must be vaild when needle is empty */
         if (needle.length() == 0) {
             return 0;
         }
@@ -33,8 +34,8 @@ public class Solution {
         for (int i = 0; i < haystack.length(); i++) {
             for (int k = 0; k < needle.length(); k++) {
                 if (k + i >= haystack.length()) {return -1;} // k+i has exceed the range of haystack length, but found nothing, so return -1                                         
-                if (haystack.charAt(i + k) != needle.charAt(k)) {break;}
-                if (k == needle.length() - 1) {return i;}
+                if (haystack.charAt(i + k) != needle.charAt(k)) {break;} // basic break case
+                if (k == needle.length() - 1) {return i;} // hang on until last step before k exceeds!
                 
             }
         }   
