@@ -1,4 +1,9 @@
-/* Example. Suppose we would like to add two binary numbers 10 and 11. We start from the last digit. Adding 0 and 1, we get 1 (no carry). That means the last digit of the answer will be one. Then we move one digit to the left: adding 1 and 1 we get 10. Hence, the answer is 101. Note that binary 10 and 11 correspond to 2 and 3 respectively. And the binary sum 101 corresponds to decimal 5: is the binary addition corresponds to our regular addition. Thanks to: http://web.math.princeton.edu/math_alive/1/Lab1/BinAdd.html
+/* Example. Suppose we would like to add two binary numbers 10 and 11. We start from the last digit. 
+   Adding 0 and 1, we get 1 (no carry). That means the last digit of the answer will be one. 
+   Then we move one digit to the left: adding 1 and 1 we get 10. Hence, the answer is 101. 
+   Note that binary 10 and 11 correspond to 2 and 3 respectively. 
+   And the binary sum 101 corresponds to decimal 5: is the binary addition corresponds to our regular addition. 
+   Thanks to: http://web.math.princeton.edu/math_alive/1/Lab1/BinAdd.html
 
    Examples: 11 + 11 = 110
    
