@@ -18,7 +18,7 @@ canConstruct("aa", "aab") -> true
              or defaultValue if this map contains no mapping for the key
    
    Time Complexity: O(M+N)
-   Space Complexity: O(N/M)
+   Space Complexity: O(N) or O(M)
 */ 
 public class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
