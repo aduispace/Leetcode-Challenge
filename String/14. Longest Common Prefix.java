@@ -1,6 +1,6 @@
 /* Thoughts: 1. consider the corner cases, especially when only one string in the array, it itself will be valid prefix;
    2. nest loop? k for strs, i for char in a string
-   3. 如何优化？目前太慢
+   3. 如何优化？
    
    Notes:注意了，经常在==这样的问题上犯错！
    
@@ -17,7 +17,8 @@ public class Solution {
         
         StringBuilder record = new StringBuilder(""); // cannot assign a String to StringBuilder!
         int i = 0;
-        while (i < leastLen(strs)) {
+        int least = leastLen(strs); 
+        while (i < least) { // 避免反复调用函数
             char a = strs[0].charAt(i);
             boolean judge = false;
             for (int k = 1; k < strs.length; k++) {
