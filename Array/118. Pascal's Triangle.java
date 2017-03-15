@@ -15,7 +15,7 @@ Return
 
 /**
  * Time Complexity: O(n^2)
- * 
+ * 思路：先加[1]进去，接下来新加的每一个list都有[1,...,1]的格式，且都需要上一个list生成list.get(k) + list.get(k+1)
 */
 
 public class Solution {
