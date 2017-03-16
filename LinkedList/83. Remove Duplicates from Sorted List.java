@@ -3,7 +3,7 @@
  *           2. be very careful to the nullpointer exception, 
  *              check every condition to make sure won't transpass the boundary
  * 
- * Time Complexity: O(N^2), too slow 
+ * Time Complexity: O(N^2), too slow! 
  * 
  */
 
