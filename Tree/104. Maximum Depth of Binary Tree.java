@@ -3,6 +3,13 @@
 
  The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 /
+
+/*
+ Solution1: Recursion
+ Time Complexity: O(N)
+ Space Complexity: O(h)
+*/
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
