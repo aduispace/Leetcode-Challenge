@@ -1,6 +1,46 @@
+/* Solution1: Bit Manipulation
+* we use bitwise XOR to solve this problem :
+
+first , we have to know the bitwise XOR in java
+
+0 ^ N = N
+N ^ N = 0
+So..... if N is the single number
+
+N1 ^ N1 ^ N2 ^ N2 ^..............^ Nx ^ Nx ^ N
+
+= (N1^N1) ^ (N2^N2) ^..............^ (Nx^Nx) ^ N
+
+= 0 ^ 0 ^ ..........^ 0 ^ N
+
+= N
+*/
+
+**************************************************************************************
+/**
+ * Solution1: Use bitwise -> introduce 0 -> 0^N = N; N^N = 0!
+ * 
+ * 
+ * 
+ */
+
+public class Solution {
+    public int singleNumber(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int result = 0;
+        for (int i : nums) {
+            result = result ^ i; // the remaining single number will be the target
+        }
+        return result;
+    }
+}
+
+**************************************************************************************
 
 /**
- * Solution1: Use hashmap, too slow and high space consumption  
+ * Solution2: Use hashmap, too slow and high space consumption  
  * Time Complexity: O(2N)
  * Space Complexity: O(N)
  * 
