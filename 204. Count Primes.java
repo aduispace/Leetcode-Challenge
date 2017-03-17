@@ -1,3 +1,4 @@
+
 /**
  * Solution1: two loops, time exceed, need to be modified
  * Time Complexity: O(N^2)
