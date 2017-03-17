@@ -22,7 +22,7 @@ public class Solution {
     private int result = 0;
     private int helper(TreeNode root, int sum) {
         int cur = sum;
-        if (root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) { // recursion exiting condition!
             result = Math.max(cur, result);
         } else if (root.left != null && root.right != null){
             cur++;
@@ -35,6 +35,6 @@ public class Solution {
             cur++;
             helper(root.right, cur);
         }
-        return result;
+        return result; // return here!
     }
 }
