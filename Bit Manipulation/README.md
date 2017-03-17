@@ -1,1 +1,1 @@
-## 1. Always consider use bit operation when **compare number** or **find number** 
+##### 1. Always consider use bit operation when __compare number__ or __find number__ 
