@@ -1,6 +1,7 @@
 /*
 * Time Complexity: O(3N)
 * Space Complexity: O(2N)
+* Thoughts: Since we need to sum from the lower digits, use two stacks to maintain two LinkedList!
 */
 
 
