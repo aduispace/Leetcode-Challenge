@@ -28,7 +28,7 @@ int Add(int x, int y)
         // carry now contains common set bits of x and y
         int carry = x & y;  
  
-        // Sum of bits of x and y where at least one of the bits is not set
+        // Sum of bits of x and y where at least one of the bits is not set, Note: set ==> 1; clear ==> 0
         x = x ^ y; 
  
         // Carry is shifted by one so that adding it to x gives the required sum
