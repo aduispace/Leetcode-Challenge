@@ -50,3 +50,30 @@ class Solution {
 }
 
 
+// Union Find: 注意find() 和 roots[] 的写法
+// Time: O(Edges * Nodes)
+
+class Solution {
+    public int countComponents(int n, int[][] edges) {
+        int res = n; // num of disjointed sets == n - edges (if no circular and undirected)
+        int[] roots = new int[n];
+        Arrays.fill(roots, -1);
+        for (int[] edge : edges) {
+            int x = findRoot(roots, edge[0]);
+            int y = findRoot(roots, edge[1]);
+            // x == y说明出现环， x != y说明产生一条新的edge
+            if (x != y) {
+                res--;
+                roots[x] = y; // index y is parent of index x
+            }
+        }
+        return res;
+    }
+    
+    private int findRoot(int[] roots, int index) {
+        while (roots[index] != -1) {
+            index = roots[index];
+        }
+        return index;
+    }
+}
