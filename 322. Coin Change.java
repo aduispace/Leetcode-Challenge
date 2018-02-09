@@ -13,6 +13,8 @@ Note:
 You may assume that you have an infinite number of each kind of coin.
 */
 
+// Recursion解法：与dp类似，也要maintain一个amount矩阵来减少重复运算 
+
 class Solution {
     public int coinChange(int[] coins, int amount) {
         if (coins.length == 0 || amount == 0) {
