@@ -36,3 +36,27 @@ class Solution {
         return minimal[amount];
     }
 }
+
+
+
+// DP解法：min = Math.min(min, dp[i - coins[j]] + 1)
+
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        if (coins == null || coins.length == 0 || amount < 0) {
+            return -1;
+        }
+        int[] dp = new int[amount + 1]; 
+        // dp[amount] is the answer
+        for (int i = 1; i < dp.length; i++) {
+            int min = Integer.MAX_VALUE;
+            for (int j = 0; j < coins.length; j++) {
+                if (coins[j] <= i && dp[i - coins[j]] != -1) {
+                    min = Math.min(min, dp[i - coins[j]] + 1); // previous optimal num of coins + 1, 最后再选一个剪完剩最少的coin
+                }
+            }
+            dp[i] = (min == Integer.MAX_VALUE? -1 : min);
+        }
+        return dp[amount];
+    }
+}
