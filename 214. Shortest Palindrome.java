@@ -31,6 +31,8 @@ class Solution {
 
 
 // Solution2: O(N^2)，提前退出，不会TLE
+// 因为s.charAt()慢，把String用toCharArray 转换为字符串数组就可以。原因是toCharArray 用的是System.arraycopy 更快
+
 class Solution {
     public String shortestPalindrome(String s) {
         int i = 0, j = s.length() - 1;
