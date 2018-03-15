@@ -23,24 +23,35 @@ Note: The length of path between two nodes is represented by the number of edges
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 class Solution {
     public int diameterOfBinaryTree(TreeNode root) {
         int useless = helper(root);
-        if (root == null) {
-            return 0;
-        }
         return diameter - 1;
     }
-    private int diameter = 0;
+    private int diameter = 1;
     private int helper(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        int left = helper(root.left) + 1;
-        int right = helper(root.right) + 1;
+//         int left = helper(root.left) + 1;
+//         int right = helper(root.right) + 1;
 
-        int cur = left + right - 1;
-        diameter = Math.max(cur, diameter);
-        return Math.max(left, right); // 返回上一层的时候不能有 2-4-5这样的折线！
+//         int cur = left + right - 1;
+//         diameter = Math.max(cur, diameter);
+//         return Math.max(left, right); // 返回上一层的时候不能有 2-4-5这样的折线！
+        
+        int left = helper(root.left);
+        int right = helper(root.right);
+        diameter = Math.max(diameter, left + right + 1);
+        return Math.max(left, right) + 1;
     }
 }
