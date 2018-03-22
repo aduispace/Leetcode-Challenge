@@ -11,6 +11,7 @@ Example: 19 is a happy number
 12 + 02 + 02 = 1
 */
 
+// 用set记录出现过的数，有重复说明进loop了！
 class Solution {
     public boolean isHappy(int n) {
         Set<Integer> appearedNums = new HashSet<>();
